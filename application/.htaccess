@@ -1,6 +1,21 @@
-<IfModule authz_core_module>
-    Require all denied
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirect all requests to index.php, except for actual files or directories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
-<IfModule !authz_core_module>
+
+# Block access to certain file types
+<Files .*>
+    Order Deny,Allow
     Deny from all
-</IfModule>
+</Files>
+
+# Deny access to specific files
+<FilesMatch "(^\.|(?:htaccess|htpasswd|config|env|ini|log|sh|sql))">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>

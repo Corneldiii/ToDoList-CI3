@@ -20,10 +20,10 @@
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <form id="todo-form" action="<?= site_url('TodoController/store/') ?>" method="POST">
+                        <form id="todo-form" action="<?= base_url('TodoController/store') ?>" method="POST">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="task" id="todo-input"
-                                    placeholder="Tambah task baru" required>
+                                <input type="text" class="form-control" name="list" id="todo-input"
+                                    placeholder="Tambah list baru" required>
                                 <button class="btn btn-primary" type="submit">
                                     Simpan
                                 </button>
@@ -49,8 +49,8 @@
                                         <input type="text" class="form-control edit-input" style="display: none;"
                                             value="<?php echo $item['List']; ?>">
                                         <div class="btn-group">
-                                            <form action="<?= site_url('todoController/delete/' . $item['id_List']) ?>" method="POST">
-                                                <input type="hidden" name="_method" value="DELETE">
+                                            <form action="<?= site_url('TodoController/delete/' . $item['id_List']) ?>" method="POST">
+                                                <input type="hidden" name="_method" value="">
                                                 <button class="btn btn-danger btn-sm delete-btn mr-1"
                                                     name="clear">✕</button>
                                             </form>

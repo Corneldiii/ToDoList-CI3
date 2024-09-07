@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'TodoController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['TodoController/delete/(:num)'] = 'TodoController/delete/$1';
+$route['TodoController/update/(:num)'] = 'TodoController/update/$1';
