@@ -1,6 +1,7 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class todomodel extends CI_Model{
+class Todomodel extends CI_Model{
 
     public function todoAkun($id){
         $this->db->where('id_akun',$id);
