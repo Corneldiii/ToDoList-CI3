@@ -12,7 +12,6 @@
     <title>Hello, world!</title>
 
     <style>
-        /* Custom CSS to limit form width */
         .form-container {
             max-width: 400px;
             width: 100%;

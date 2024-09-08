@@ -23,11 +23,10 @@ class Usermodel extends CI_Model{
         return false;
     }
 
-    // Fungsi untuk mendapatkan user berdasarkan ID
     public function get_user_by_id($user_id) {
         $this->db->where('id_akun', $user_id);
         $query = $this->db->get('akun');
         
-        return $query->row(); // Return user data
+        return $query->row(); 
     }
 }
