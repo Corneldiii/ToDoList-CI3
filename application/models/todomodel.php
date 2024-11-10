@@ -14,7 +14,7 @@ class Todomodel extends CI_Model{
         $data = array(
             'List' => $this->input->post('list'),
             'status' => 1,
-            'id_akun' => 2
+            'id_akun' => $this->session->userdata('user_id'),
         );
 
         $this->db->insert('todo',$data);

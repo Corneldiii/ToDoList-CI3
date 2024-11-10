@@ -24,7 +24,7 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="list" id="todo-input"
                                     placeholder="Tambah list baru" required>
-                                <button class="btn btn-primary" type="submit">
+                                <button class="btn btn-primary" type="submit" id="kirim">
                                     Simpan
                                 </button>
                             </div>
@@ -71,6 +71,9 @@
 
     <!-- Bootstrap JS Bundle (popper.js included) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    </script>
 
 </body>
 

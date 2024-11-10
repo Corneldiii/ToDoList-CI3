@@ -53,5 +53,9 @@ $route['default_controller'] = 'LoginController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
+$route['login'] = 'LoginController/index';
+$route['login/submit'] = 'LoginController/login';
+
 $route['TodoController/delete/(:num)'] = 'TodoController/delete/$1';
 $route['TodoController/update/(:num)'] = 'TodoController/update/$1';

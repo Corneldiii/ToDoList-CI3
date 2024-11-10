@@ -19,7 +19,7 @@ class LoginController extends CI_Controller{
         if ($user) {
             $this->session->set_userdata('user_id', $user->id_akun);
             
-            redirect('TodoController/index');
+            $this->load->view('Todo/todoView');
         } else {
             $this->session->set_flashdata('error', 'Username atau password salah');
             redirect('LoginController/index');

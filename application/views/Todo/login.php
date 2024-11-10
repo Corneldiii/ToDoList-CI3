@@ -21,7 +21,7 @@
 
 <body class="d-flex justify-content-center align-items-center vh-100">
     <div class="form-container">
-        <form action ="<?= site_url("LoginController/login")?>" method="post">
+        <form action ="<?= site_url("LoginController/login")?>" method="POST">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
